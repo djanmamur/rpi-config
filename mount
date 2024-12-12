@@ -1,0 +1,10 @@
+
+###---fstab---###
+UUID=FABE-086D /mnt/hikvision exfat defaults,auto,users,rw,nofail,noatime,uid=1000,gid=1000 0 0
+//192.168.0.1/G/ /mnt/pishare cifs user=user,pass=pass,vers=1.0,rw,nofail,noatime,uid=1000,gid=1000 0 0
+# FABE   = Hikvision partition
+# //192* = TP Link USB device partition
+
+
+###---mount---###
+sudo mount -t cifs -o user=user,pass=pass,vers=1.0 //192.168.0.1/G/ /mnt/pishare
